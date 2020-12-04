@@ -23,17 +23,16 @@ public class ServerSocketThread implements Runnable {
     @Override
     public void run() {
         while (true) {
-            System.out.println("lol");
             if (scannerFromFirstClient.hasNext()) {
                 String result = scannerFromFirstClient.nextLine();
-                System.out.println(result);
-                writerToFirstClient.println("from server: Welcome!");
+                System.out.println("From first client: " + result);
+                writerToFirstClient.println("Welcome!");
             }
 
             if (scannerFromSecondClient.hasNext()) {
                 String result = scannerFromSecondClient.nextLine();
-                System.out.println(result);
-                writerToSecondClient.println("from server: Welcome!");
+                System.out.println("From second client: " + result);
+                writerToSecondClient.println("Welcome!");
             }
         }
     }

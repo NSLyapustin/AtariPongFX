@@ -24,7 +24,7 @@ public class StartController {
             while(true) {
                 Thread.sleep(10);
                 if (scanner.hasNextLine()) {
-                    System.out.println("От сервера: " + scanner.nextLine());
+                    System.out.println("From server: " + scanner.nextLine());
                 }
             }
         } catch (IOException | InterruptedException e) {
